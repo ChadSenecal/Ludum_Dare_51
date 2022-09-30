@@ -1,0 +1,4 @@
+﻿  Main.c
+D:\desktop code stuff\VSFolder\C++_stuff\Practice\Ludum_dare_practice\Main.c(79,67): warning C4028: formal parameter 3 different from declaration
+D:\desktop code stuff\VSFolder\C++_stuff\Practice\Ludum_dare_practice\Main.c(79,84): warning C4100: 'CmdShow': unreferenced formal parameter
+  Ludum_dare_practice.vcxproj -> D:\desktop code stuff\VSFolder\C++_stuff\Practice\x64\Debug\Ludum_dare_practice.exe
