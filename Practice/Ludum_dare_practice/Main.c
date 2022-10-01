@@ -230,3 +230,25 @@ BOOL GameIsAlreadyRunning(void) {
 		return(FALSE);
 	}
 }
+//ALL ABOUT BITMAPS
+/*
+* definition: A graphical object used to create, manipulate(scale, scroll, rotate, and paint), nad store images as files on a disk.
+* (-)It is a GDI object that can be selected into a device context(DC).
+* Device Context(DC) definition: Structures that define a set of graphic objects and their associated attributes, and graphic modes that affect output.
+* List of objects that can be selected into a device context:
+* (1)Bitmaps - (already have def)
+* (2)Brushes - Paints the interior of polygons, ellipses, and paths
+* (3)Fonts - Draws text on video displays and other output devices.
+* (4)Logical Palette -A color palette created by an application and associated with a given (DC)
+* (5)Paths - One or more figures (or shapes) that are filed and/or outlined.
+* (6)Pens - A graphics tool that an application uses to draw lines and curves.
+* (7)Regions - A rectangle, polygon, or ellipse (or a combination of two or more of these shapes) that can be filled, painted, inverted, framed, and used to preform hit testing (testing for the cursor location).
+* 
+* A Bitmap can be broken down into the following elements:
+* (1) - A header that describes the resoultion of the device on which the rectangle of pixels was created, the dimensions of the rectangle, the size of the array of bits, and so on.
+* (2) - A logical palette
+* (3) - An array of bits that defines the relationship between pixels in the bitmapped inmage and entreis in the logical palette
+* 
+* Color palletes can be DIB(or bottom up mapping) or DDB(Top-down mapping)
+* 
+*/

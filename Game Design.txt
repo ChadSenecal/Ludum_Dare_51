@@ -1,0 +1,30 @@
+Game idea:
+name: The Tick of Time
+design:
+It is will be a clock, that every ten seconds you have to push the button for, but if you do not push the button an explosion happens. Also the clock keeps getting faster.
+This could keep going to multiple stages and such, but that will be kinda cumbersome. Focus on the main thing.
+
+APPLICATION:
+-In terms of the application itself, I do not want to have to mess a lot with text wrap and formating, so the game will open in window borderless from the start.
+
+Scenes needed:
+(1)Main menu
+	(-)Settings
+	(-)Play Button
+	(-)Exit Button
+(2)The main game scene
+	(-)The clock can be an image or it's own object depending on if it's gonna get animation.(The clock is going to be a minute stop watch)
+	(-)The ticker has to be it's own object with a rotation set to it for it's tick.
+	(-)The button will be it's own object with animation.
+	(-)If there are affects based on actions those will also be included.
+(3)The fail scene
+	(-)Restart Button
+	(-)Main Menu Button
+	(-)Exit Button
+(4)The Victory scene
+	(-)Play Again Button
+	(-)Main Menu Button
+	(-)Exit Button
+
+Scene design:
+Main menu - > game -> victory/fail -> Main Menu/Game(Make sure to delete all resources from a previous scene before moving onto a new scene)

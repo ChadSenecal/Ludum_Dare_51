@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <windows.h>
 
-#define GAMENAME "GameName"
+#define GAMENAME "The Tick of Time"
 //use OutputDebugStirng() for dev comments
 
 //Predeclaration call
 LRESULT CALLBACK MainWindowProcedure(_In_ HWND WindowHandle, _In_ UINT Message, _In_ WPARAM wParam, _In_ LPARAM lParam);
 BOOL isOneGame(void);
+BOOL gameIsRunning = TRUE;
 
 int WinMain(HINSTANCE Instance,HINSTANCE prevInstance, PWSTR CommandLine, int CmdShow) {
 	UNREFERENCED_PARAMETER(prevInstance);
@@ -29,7 +30,7 @@ int WinMain(HINSTANCE Instance,HINSTANCE prevInstance, PWSTR CommandLine, int Cm
 	WindowClass.hInstance = Instance;
 	WindowClass.hIcon = LoadIconA(NULL, IDI_APPLICATION);
 	WindowClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-	WindowClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	WindowClass.hbrBackground = CreateSolidBrush(RGB(100, 200, 100));
 	WindowClass.lpszMenuName = NULL;
 	WindowClass.lpszClassName = GAMENAME "_WindowClass";
 	WindowClass.hIconSm = LoadIconA(NULL, IDI_APPLICATION);
@@ -40,7 +41,7 @@ int WinMain(HINSTANCE Instance,HINSTANCE prevInstance, PWSTR CommandLine, int Cm
 	}
 
 	WindowHandle = CreateWindowExA(WS_EX_CLIENTEDGE, WindowClass.lpszClassName, GAMENAME, WS_VISIBLE | WS_OVERLAPPEDWINDOW,
-		CW_USEDEFAULT, CW_USEDEFAULT, 240, 120, NULL, NULL, Instance, NULL);
+		CW_USEDEFAULT, CW_USEDEFAULT, 640, 320, NULL, NULL, Instance, NULL);
 
 	if (WindowHandle == NULL) {
 		MessageBoxA(NULL, "Window Creation Failed!", "Error", MB_ICONEXCLAMATION | MB_OK);
@@ -48,9 +49,13 @@ int WinMain(HINSTANCE Instance,HINSTANCE prevInstance, PWSTR CommandLine, int Cm
 	}
 
 	MSG Message = { 0 };
-	while (GetMessageA(&Message, NULL, 0, 0) > 0) {
-		TranslateMessage(&Message);
-		DispatchMessageA(&Message);
+	while (gameIsRunning == TRUE) {
+		//Message
+		while (PeekMessageA(&Message, WindowHandle, 0, 0, PM_REMOVE)) {
+			DispatchMessageA(&Message);
+		}
+		//Player Input
+		//Rendering
 	}
 
 	return 0;
@@ -62,8 +67,13 @@ LRESULT CALLBACK MainWindowProcedure(_In_ HWND WindowHandle, _In_ UINT Message, 
 		case WM_CLOSE:
 			DestroyWindow(WindowHandle);
 			break;
+		//Case on immediate window creation(Usually what we want in the window)
+		case WM_CREATE:
+			OutputDebugStringA("The Window has been created.\n");
+			break;
 		case WM_DESTROY:
 			PostQuitMessage(0);
+			gameIsRunning = FALSE;
 			break;
 		default:
 			result = DefWindowProcA(WindowHandle, Message, wParam, lParam);
