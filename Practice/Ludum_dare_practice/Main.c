@@ -170,7 +170,7 @@ int WinMain(HINSTANCE Instance, HINSTANCE PreviousInstance, PWSTR CommandLine, i
 		NULL, NULL, Instance, NULL);
 
 	if (WindowHandle == NULL) {
-		MessageBox(NULL, "Window Registration Failed!", "Error!", MB_ICONEXCLAMATION | MB_OK);
+		MessageBox(NULL, "Window Creation Failed!", "Error!", MB_ICONEXCLAMATION | MB_OK);
 		return 0;
 	}
 
