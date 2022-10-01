@@ -3,4 +3,5 @@
 
 On the project specifically, I've decided to program the game using Windows standard Win32 API and the GDI(Graphical Device Interface) platform in Visual Studio using C. I thought this would be the best option to program my game in, because it gives me experience with both the C language and the internal Windows API framework. which is based on the fact that the Windows operating system is still one of the most used desktop enviornment in the world. So, when or if I decide to move on to future projects using the windows application framework, it will not be as daunting of a task.
 
-Finally, since Ludum Dare 51 has not commenced yet, there is no current basis for I am creating currently right now. Though, I will update this README as time moves on. I may also start a trello, but only time will tell. Till then, for all those who are participating, good luck to you and don't forget to have fun!
+LUDUM DARE 51 THEME: Every 10 Seconds
+What I have decided to do:
