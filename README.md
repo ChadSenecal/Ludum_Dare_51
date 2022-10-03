@@ -5,3 +5,8 @@ On the project specifically, I've decided to program the game using Windows stan
 
 LUDUM DARE 51 THEME: Every 10 Seconds
 What I have decided to do:
+
+_______________________________________
+Yea...So, it turns out that I just didn't dedicate enough time to this, so I got nothing done. This was a all out failure... whatever though. I'll still keep at this project for those who want to see it when it's finished. This was mostly a learning experience for me, so there is nothing to really fret from this Thank you, if anyone, looked at this during LD51.
+
+In the end, Have a nice day!
